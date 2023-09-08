@@ -15,7 +15,7 @@
 
         <h3>Example Usage:</h3>
         <p>
-          <a href="api/whoami">[base url]/api/whoami</a>
+          <a href="api/whoami" id="link_1">[base url]/api/whoami</a>
         </p>
 
         <h3>Example Output:</h3>
@@ -25,10 +25,30 @@
       </div>
       <div class="footer">
         <p>
-          by <a href="https://www.freecodecamp.org">freeCodeCamp</a>
+          By <button id="openLinksButton">EDISON MONDAL</button> For <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
         </p>
       </div>
    </body>
 
+   <script>
+    const domain = window.location.origin + "/api/whoami"
+    
+    
+    document.querySelector('#link_1').innerText = domain
 
+
+    
+    const openLinksButton = document.getElementById("openLinksButton");
+
+    openLinksButton.addEventListener("click", function () {
+        // Open the first link in a new tab/window
+        window.open("https://web.facebook.com/profile.php?id=100009253036719", "_blank");
+
+        // Open the second link in a new tab/window with a slight delay
+        setTimeout(function () {
+          window.open("https://www.linkedin.com/in/edison-mondal-a60907216/", "_blank");
+        }, 100); // Delay 
+    });
+
+  </script>
 </html>
